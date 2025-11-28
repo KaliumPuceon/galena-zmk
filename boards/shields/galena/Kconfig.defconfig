@@ -1,0 +1,53 @@
+# GALENA DONGLE CONFIG
+if SHIELD_GALENA_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Galena"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+	default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+	default 2
+
+config BT_MAX_CONN
+	default 6
+
+config BT_MAX_PAIRED
+	default 6
+
+endif
+# ENDDONGLE
+
+
+# GALENA LEFT SIDE CONFIG
+if SHIELD_GALENA_LEFT
+
+config ZMK_SPLIT
+    default y
+
+endif
+# ENDLEFT
+
+
+# GALENA RIGHT SIDE CONFIG
+if SHIELD_GALENA_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
+# ENDRIGHT
+
+
+# COMMON CONFIG SETTINGS
+if SHIELD_GALENA_LEFT || SHIELD_GALENA_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
+# ENDCOMMON
